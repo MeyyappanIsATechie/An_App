@@ -1,0 +1,63 @@
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: red;
+    padding: 15px;
+    border-bottom: 4px solid darken(red, 10%);
+    
+    // Add shadow to the header
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+    // Handle small screens (media queries for responsiveness)
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      padding: 10px;
+      .nav-links {
+        margin-top: 10px;
+      }
+    }
+    
+    h2 {
+      color: white;
+      font-size: 24px;
+      padding-left: 10px;
+      margin: 0;
+  
+      // Text shadow for title to stand out
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  
+      // Responsive font size
+      @media screen and (max-width: 768px) {
+        font-size: 20px;
+      }
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 20px;
+  
+      a {
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+        position: relative;
+  
+        // Add padding and margin for spacing
+        padding: 5px 10px;
+  
+        // Custom hover effect
+        &:hover {
+          color: lighten(white, 10%);
+          border-bottom: 2px solid white;
+        }
+  
+        // Active state
+        &.active {
+          font-weight: bold;
+          border-bottom: 2px solid white;
+        }
+      }
+    }
+  }
+  
